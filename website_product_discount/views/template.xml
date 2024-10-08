@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="website_price_discount" inherit_id="website_sale.product"
+              name="Price Discount" priority="20">
+        <xpath expr="//t[@t-call='website_sale.product_price']" position="replace">
+        <t t-call="website_sale.product_price"/>
+<!--             <t t-if="product.discount_percentage == 0">
+                <t t-call="website_sale.product_price"/>
+            </t>
+            <t t-else="">
+            <div>
+                    <h3><s><span t-field="product.list_price"
+                          t-options="{'widget': 'monetary', 'display_currency': product.currency_id}"/></s>
+                     <span t-field="product.sale_price_after_discount"
+                          t-options="{'widget': 'monetary', 'display_currency': product.currency_id}"/></h3>
+                </div>
+            </t> -->
+        </xpath>
+    </template>
+</odoo>
